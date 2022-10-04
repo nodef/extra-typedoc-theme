@@ -1,0 +1,25 @@
+{
+  "name": "extra-typedoc-theme",
+  "version": "0.0.1",
+  "description": "TypeDoc theme for extra-* packages.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-typedoc-theme.git"
+  },
+  "keywords": [
+    "extra",
+    "typedoc",
+    "theme"
+  ],
+  "author": "wolfram77@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodef/extra-typedoc-theme/issues"
+  },
+  "homepage": "https://github.com/nodef/extra-typedoc-theme#readme"
+}
