@@ -1,8 +1,7 @@
 {
   "name": "extra-typedoc-theme",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "TypeDoc theme for extra-* packages.",
-  "private": true,
   "main": "index.js",
   "module": "index.mjs",
   "exports": {

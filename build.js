@@ -58,20 +58,16 @@ function transformJsdoc(x, dm) {
 function bundleScript(ds) {
   var dm = new Map(ds.map(d => [d.name, d]));
   build.exec(`tsc`);
-  build.bundleScript(`.build/${srcts}`);
-  build.jsdocifyScript('index.d.ts', 'index.d.ts', x => transformJsdoc(x, dm));
+  build.exec('cp .build/index.d.ts ./');
+  build.exec('cp .build/index.js index.mjs');
+  build.exec('rollup --format=cjs --file=index.js -- index.mjs');
 }
 
 
 // Publish root packages to NPM, GitHub.
 function publishRootPackages(ds, ver) {
-  var m   = build.readMetadata('.');
-  var sym = build.symbolname(m.name);
   bundleScript(ds);
   publishRootPackage(ds, ver, '');
-  build.webifyScript('index.mjs', 'index.mjs', {format: 'esm'});
-  build.webifyScript('index.js',  'index.js',  {format: 'cjs', symbol: sym});
-  publishRootPackage(ds, ver, 'web');
 }
 
 
