@@ -1,15 +1,19 @@
 {
   "name": "extra-typedoc-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeDoc theme for extra-* packages.",
   "private": true,
   "main": "index.js",
-  "scripts": {
-    "test": "exit"
+  "module": "index.mjs",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nodef/extra-typedoc-theme.git"
+  "scripts": {
+    "test": "exit",
+    "build": "node ./build",
+    "publish-docs": "node ./build publish-docs",
+    "publish-packages": "node ./build publish-packages"
   },
   "keywords": [
     "extra",
@@ -18,8 +22,23 @@
   ],
   "author": "wolfram77@gmail.com",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodef/extra-typedoc-theme.git"
+  },
   "bugs": {
     "url": "https://github.com/nodef/extra-typedoc-theme/issues"
   },
-  "homepage": "https://github.com/nodef/extra-typedoc-theme#readme"
+  "homepage": "https://github.com/nodef/extra-typedoc-theme#readme",
+  "peerDependencies": {
+    "typedoc": "^0.23.15"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "extra-build": "^2.2.29",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "typedoc": "^0.23.15"
+  }
 }
