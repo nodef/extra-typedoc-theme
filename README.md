@@ -19,14 +19,16 @@ enable **simple linking** to generated HTML documentation.
 <br>
 
 ```bash
-## NOTE: Not working currently!
-$ typedoc --plugin extra-typedoc-theme --theme extra-typedoc-theme "src/index.ts" --out ".docs"
+## Install as dev-dependency to you project.
+$ npm install --save-dev extra-typedoc-theme
+
+## Generate docs through typedoc while using this theme.
+$ typedoc --plugin extra-typedoc-theme "src/index.ts" --out ".docs"
 ```
 
-
 <br>
 <br>
 
 
-[![](https://img.youtube.com/vi/qgxPbqDskyw/maxresdefault.jpg)](https://www.youtube.com/watch?v=qgxPbqDskyw)<br>
+[![](https://img.youtube.com/vi/kQZ2nA2GpXw/maxresdefault.jpg)](https://www.youtube.com/watch?v=kQZ2nA2GpXw)<br>
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
