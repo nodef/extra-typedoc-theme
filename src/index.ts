@@ -1,4 +1,4 @@
-import {Application, DefaultTheme, Reflection} from "typedoc";
+import {Application, DefaultTheme, Reflection, DeclarationReflection} from "typedoc";
 
 
 // Preserve static methods of DefaultTheme.
@@ -8,7 +8,7 @@ const getUrlDefault = DefaultTheme.getUrl;
 
 
 // Check if symbol is external.
-function isExternalSymbol(reflection: Reflection): boolean {
+function isExternalSymbol(reflection: DeclarationReflection): boolean {
   return !reflection.sources
     || reflection.sources.length===0
     || reflection.sources[0].fileName.startsWith("node_modules");
@@ -21,7 +21,7 @@ class ExtraTypedocTheme extends DefaultTheme {
   static getUrl(reflection: Reflection, relative?: Reflection, separator?: string): string {
     var def = getUrlDefault(reflection, relative, separator);
     var mod = def.replace(/\-\d+(\.\w+)?$/, "$1");
-    return isExternalSymbol(reflection)? def : mod;
+    return isExternalSymbol(reflection as DeclarationReflection)? def : mod;
   }
 }
 

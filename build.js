@@ -73,8 +73,9 @@ function publishRootPackages(ds, ver) {
 
 // Publish docs.
 function publishDocs(ds) {
+  bundleScript(ds);
   build.updateGithubRepoDetails({owner, repo, topics: keywords(ds, true)});
-  build.generateDocs(`src/${srcts}`);
+  build.exec(`typedoc --plugin ./ "src/${srcts}" --out ".docs"`);
   build.publishDocs();
 }
 
