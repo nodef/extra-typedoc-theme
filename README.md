@@ -1,4 +1,4 @@
-TypeDoc theme for extra-* packages.<br>
+TypeDoc theme for extra-* packages (v0.24).<br>
 📦 [Node.js](https://www.npmjs.com/package/extra-typedoc-theme),
 📜 [Files](https://unpkg.com/extra-typedoc-theme/).
 
@@ -11,8 +11,6 @@ puts all the generated files in the *same directory* on a *case-insensitive file
 *directories*, and thus it should **not** be an issue. This package is a TypeDoc theme
 which removes URL suffixes (`function-1.html` → `function.html`) in order to
 enable **simple linking** to generated HTML documentation.
-
-> Stability: [Experimental](https://www.youtube.com/watch?v=L1j93RnIxEo).
 
 [TypeDoc]: https://www.npmjs.com/package/typedoc
 
@@ -32,3 +30,4 @@ $ typedoc --plugin extra-typedoc-theme "src/index.ts" --out ".docs"
 
 [![](https://img.youtube.com/vi/kQZ2nA2GpXw/maxresdefault.jpg)](https://www.youtube.com/watch?v=kQZ2nA2GpXw)<br>
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/extra-typedoc-theme)
